@@ -1,0 +1,35 @@
+# Dependabot configuration file for tgspot/game repository
+
+version: 2
+updates:
+  # Enable version updates for npm (assuming it's a JavaScript/Node.js project)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "npm"
+    version_requirement_updates: "increase-if-necessary"
+
+  # Enable version updates for pip (assuming there might be Python dependencies)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "pip"
+    version_requirement_updates: "increase-if-necessary"
+
+  # Enable updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "github-actions"
